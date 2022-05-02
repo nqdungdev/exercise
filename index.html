@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive</title>
+    <style>
+        article {
+            border-bottom: 1px solid black;
+            padding: 20px;
+        }
+        
+        .title {
+            font-weight: 700;
+        }
+        
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+        
+        input {
+            width: 50px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <article>
+            <p class="title"> 1. In một bảng số từ 1-100 thỏa mãn điều kiện: (gợi ý dùng 2 vòng for lồng nhau, để ý chỗ bước nhảy)</p>
+            <ul>
+                <li>Bảng số gồm 10 hàng và 10 cột</li>
+                <li>Các giá trị trong hàng là liên tiếp nhau</li>
+                <li>Các giá trị trong cột hơn kém nhau 10</li>
+            </ul>
+            <div id="ex1-result">
+            </div>
+        </article>
+
+        <article>
+            <p class="title">2. Viết function nhận vào tham số là một mảng số nguyên, tìm và in ra các số nguyên tố trong mảng</p>
+            <p>[<span id="ex2">1, 9, 6, 8, 7</span>]</p>
+            <p id="ex2-result"></p>
+        </article>
+
+        <article>
+            <p class="title">3. Viết function nhận vào tham số n, tính S=(2+3+4...+n)+2n</p>
+            <p id="ex3-warning"></p>
+            <label for="">n = </label>
+            <input id="ex3" type="text">
+            <button onclick='calcSumS()'>Run</button>
+            <p id="ex3-result"></p>
+        </article>
+
+        <article>
+            <p class="title">4. Viết function nhận vào tham số n, tính số lượng ước số của n.</p>
+            <p id="ex4-warning"></p>
+            <label for="">n = </label>
+            <input id="ex4" type="text">
+            <button onclick='divisor()'>Run</button>
+            <p id="ex4-result"></p>
+        </article>
+
+        <article>
+            <p class="title">5. Viết chương trình tìm số đảo ngược của 1 số nguyên dương n nhập từ bàn phím.</p>
+            <p id="ex5-warning"></p>
+            <label for="">n = </label>
+            <input id="ex5" type="text">
+            <button onclick='reverseNumber()'>Run</button>
+            <p id="ex5-result"></p>
+        </article>
+
+        <article>
+            <p class="title">6. Tìm x nguyên dương lớn nhất, biết 1+2+3+...+x ≤100</p>
+            <p id="ex6-result"></p>
+        </article>
+
+        <article>
+            <p class="title">7. Viết function nhận vào số n, in ra bảng cửu chương tương ứng với số đó.</p>
+            <p id="ex7-warning"></p>
+            <label for="">n = </label>
+            <input id="ex7" type="text">
+            <button onclick='multiplicationTable()'>Run</button>
+            <div id="ex7-result">
+            </div>
+        </article>
+
+        <article>
+            <p class="title">8. Viết hàm chia bài cho 4 người chơi.</br> Cho 4 mảng, đại diện cho 4 người chơi var players = [ [], [], [], [] ]; </br> Và 1 mảng bài: var cards = ["4K", "KH", "5C", "KA","QH", "KD", "2H", "10S", "AS", "7H", "9K", "10D"]</br> Yêu cầu viết
+                code để chia cho mỗi player 3 lá theo luật, chia lần lượt mỗi người 1 lá </br>
+            </p>
+            <div id="ex8-result">
+            </div>
+        </article>
+
+        <article>
+            <p class="title">9. Vừa gà vừa chó, bó lại cho tròn, 36 con, 100 chân chẵn. <br> Một câu đố dân gian nổi tiếng chắc hẳn tất cả các bạn đều biết. Và bạn có thể cũng đã biết đáp án của câu đố trên là 22 con gà và 14 con chó.
+                <br> Tuy nhiên, thầy giáo của Hiếu lại bắt anh ấy phải giải bài tập tổng quát: "Tìm số gà, số chó khi số tổng số con là m và tổng số chân là n". Bạn hãy giúp Hiếu giải bài toán này nhé.
+            </p>
+            <p id="ex9-warning"></p>
+            <label for="">Tổng số gà và chó m = </label>
+            <input id="ex9--1" type="text">
+            <br>
+            <label for="">Tổng số chân gà và chó n = </label>
+            <input id="ex9--2" type="text">
+            <br>
+            <button onclick='findChickenDog()'>Run</button>
+            <p id="ex9-result"></p>
+        </article>
+
+        <article>
+            <p class="title">10. Nhập vào số giờ và số phút => góc lệch giữa kim giờ và kim phút.</p>
+            <p id="ex10-warning"></p>
+            <label for="">What time is it?</label>
+            <input id="ex10--1" type="text">:<input id="ex10--2" type="text">
+            <button onclick='clockwiseDeg()'>Run</button>
+            <p id="ex10-result"></p>
+        </article>
+
+        <article>
+            <p class="title">11. Cho người dùng nhập vào 3 số nguyên, viết chương trình xuất 3 số theo thứ tự tặng dần.
+            </p>
+            <p id="ex11-warning"></p>
+            <label for="">a = </label>
+            <input id="ex11--1" type="text">
+            <label for="">b = </label>
+            <input id="ex11--2" type="text">
+            <label for="">c = </label>
+            <input id="ex11--3" type="text">
+            <button onclick='increase()'>Run</button>
+            <div id="ex11-result">
+            </div>
+        </article>
+
+        <article>
+            <p class="title">12. Viết chương trình nhập vào ngày, tháng, năm (giả sử nhập đúng, không cần kiểm tra hợp lệ). Tìm ngày tháng năm của ngày tiếp theo. Tương tự, tìm ngày tháng năm của ngày trước đó.</p>
+            <p id="ex12-warning"></p>
+            <label for="">Day: </label>
+            <input id="ex12--1" type="text">
+            <label for="">Month: </label>
+            <input id="ex12--2" type="text">
+            <label for="">Year: </label>
+            <input id="ex12--3" type="text">
+            <button onclick='beforeAfterDay()'>Run</button>
+            <div id="ex12-result">
+            </div>
+        </article>
+
+        <article>
+            <p class="title">13. Hãy viết chương trình "Chào hỏi" các thành viên của gia đình có đặc điểm sau đây: đầu tiên là máy sẽ hỏi ai đang sử dụng máy. Sau đó căn cứ vào câu trả lời nhận được mà máy cần đưa ra một câu chào hợp lý, dễ thương. Giả sử trong gia đình
+                có 4 thành viên là: Bố (B), Mẹ (M), anh trai (A) và em gái (E);</p>
+            <button onclick='greeting()'>Run</button>
+        </article>
+
+        <article>
+            <p class="title">14. Cho 3 số nguyên. Hãy viết chương trình xuất ra có bao nhiêu số lẻ và bao nhiêu số chẵn.
+            </p>
+            <p id="ex14-warning"></p>
+            <label for="">a = </label>
+            <input id="ex14--1" type="text">
+            <label for="">b = </label>
+            <input id="ex14--2" type="text">
+            <label for="">c = </label>
+            <input id="ex14--3" type="text">
+            <button onclick='evenOdd()'>Run</button>
+            <div id="ex14-result">
+            </div>
+        </article>
+
+        <article>
+            <p class="title">15. Viết chương trình nhập tháng, năm. Hãy cho biết tháng đó có bao nhiêu ngày.</p>
+            <p id="ex15-warning"></p>
+            <label for="">Month: </label>
+            <input id="ex15--1" type="text">
+            <label for="">Year: </label>
+            <input id="ex15--2" type="text">
+            <button onclick='howManyDays()'>Run</button>
+            <div id="ex15-result">
+            </div>
+        </article>
+
+        <article>
+            <p class="title">16. Cho biết tên và tọa độ nhà của 3 sinh viên. Cho biết tọa độ của trường đại học. Hãy viết chương trình cho máy in tên sinh viên ở xa trường đại học nhất.</p>
+            <p id="ex16-warning"></p>
+            <label for="">Tọa độ nhà sinh viên A: </label>
+            <input id="ex16--1" type="text">:
+            <input id="ex16--2" type="text">
+            <br>
+            <label for="">Tọa độ nhà sinh viên B: </label>
+            <input id="ex16--3" type="text">:
+            <input id="ex16--4" type="text">
+            <br>
+            <label for="">Tọa độ nhà sinh viên C: </label>
+            <input id="ex16--5" type="text">:
+            <input id="ex16--6" type="text">
+            <br>
+            <label for="">Tọa độ trường đại học X: </label>
+            <input id="ex16--7" type="text">:
+            <input id="ex16--8" type="text">
+            <br>
+            <button onclick='distance()'>Run</button>
+            <div id="ex16-result">
+            </div>
+        </article>
+
+        <article>
+            <p class="title">17. Viết chương trình nhập 3 số thực. Hãy thay tất cả các số âm bằng giá trị tuyệt đối của nó.
+            </p>
+            <p id="ex17-warning"></p>
+            <label for="">a = </label>
+            <input id="ex17--1" type="text">
+            <label for="">b = </label>
+            <input id="ex17--2" type="text">
+            <label for="">c = </label>
+            <input id="ex17--3" type="text">
+            <button onclick='handleAbs()'>Run</button>
+            <div id="ex17-result">
+            </div>
+        </article>
+
+        <article>
+            <p class="title">18. Viết chương trình nhập vào số nguyên có ba chữ số. Hãy in ra cách đọc cho nó.</p>
+            <p id="ex18-warning"></p>
+            <label for="">a = </label>
+            <input id="ex18" type="text">
+            <button onclick='readNumber()'>Run</button>
+            <div id="ex18-result">
+            </div>
+        </article>
+
+        <article>
+            <p class="title">19. Viết chương trình nhập 3 cạnh của một tam giác. Hãy cho biết tam giác đó là tam giác gì.
+            </p>
+            <p id="ex19-warning"></p>
+            <label for="">a = </label>
+            <input id="ex19--1" type="text">
+            <label for="">b = </label>
+            <input id="ex19--2" type="text">
+            <label for="">c = </label>
+            <input id="ex19--3" type="text">
+            <button onclick='checkTriangle()'>Run</button>
+            <div id="ex19-result">
+            </div>
+        </article>
+    </section>
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
